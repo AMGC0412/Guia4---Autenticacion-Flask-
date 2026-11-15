@@ -1,0 +1,7 @@
+# Entrega de archivos ignorados por Git
+__pycache__/
+*.pyc
+.pytest_cache/
+# La base de datos local no se sube: se crea limpia en el despliegue
+guia4.db
+guia4.db-journal

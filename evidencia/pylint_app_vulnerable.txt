@@ -1,0 +1,8 @@
+************* Module app_vulnerable
+app_vulnerable.py:36:0: C0116: Missing function or method docstring (missing-function-docstring)
+app_vulnerable.py:44:0: C0116: Missing function or method docstring (missing-function-docstring)
+app_vulnerable.py:50:0: C0116: Missing function or method docstring (missing-function-docstring)
+
+------------------------------------------------------------------
+Your code has been rated at 9.35/10 (previous run: 9.35/10, +0.00)
+

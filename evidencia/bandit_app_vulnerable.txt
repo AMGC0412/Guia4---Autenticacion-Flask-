@@ -1,0 +1,42 @@
+Run started:2026-11-15 19:12:51.555135+00:00
+
+Test results:
+>> Issue: [B608:hardcoded_sql_expressions] Possible SQL injection vector through string-based query construction.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-89 (https://cwe.mitre.org/data/definitions/89.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html
+   Location: ./app_vulnerable.py:97:8
+96	    fila = db.execute(
+97	        "SELECT id, user_id, cancha, fecha, estado FROM reservas WHERE id = "
+98	        + reserva_id
+99	    ).fetchone()
+
+--------------------------------------------------
+>> Issue: [B608:hardcoded_sql_expressions] Possible SQL injection vector through string-based query construction.
+   Severity: Medium   Confidence: Low
+   CWE: CWE-89 (https://cwe.mitre.org/data/definitions/89.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html
+   Location: ./app_vulnerable.py:117:15
+116	    db = get_db()
+117	    consulta = "SELECT id, email, nombre, rol FROM users WHERE email = '" + email + "'"
+118	    filas = db.execute(consulta).fetchall()
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 113
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 0
+		Medium: 2
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 1
+		Medium: 1
+		High: 0
+Files skipped (0):
